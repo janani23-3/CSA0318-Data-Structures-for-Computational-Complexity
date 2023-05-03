@@ -1,0 +1,65 @@
+#include<stdio.h>    
+#include<stdlib.h>  
+int main()
+{  
+  int a[10][10],b[10][10],mul[10][10],r,c,i,j,k;    
+  system("cls");  
+  printf("Enter the number of rows :");    
+  scanf("%d",&r);    
+  printf("Enter the number of column :");    
+  scanf("%d",&c);    
+  printf("Enter the first matrix element :\n");    
+  for(i=0;i<r;i++)    
+  {    
+    for(j=0;j<c;j++)    
+    {      
+      scanf("%d",&a[i][j]);    
+    }      
+  }    
+  printf("Enter the second matrix element :\n");    
+  for(i=0;i<r;i++)    
+  {    
+    for(j=0;j<c;j++)    
+    {    
+      scanf("%d",&b[i][j]);    
+    }    
+  }      
+  printf("Multiplication of the matrix :\n");    
+  for(i=0;i<r;i++)    
+  {    
+    for(j=0;j<c;j++)    
+    {    
+      mul[i][j]=0;    
+      for(k=0;k<c;k++)    
+      {    
+        mul[i][j]+=a[i][k]*b[k][j];    
+      }    
+    }    
+  }    
+  for(i=0;i<r;i++)    
+  {    
+    for(j=0;j<c;j++)    
+    {    
+      printf("%d\t",mul[i][j]);    
+    }    
+    printf("\n");    
+  }    
+  return 0;  
+}  
+
+OUTPUT:
+Enter the number of rows :2
+Enter the number of column :2
+Enter the first matrix element :
+3
+4
+1
+2
+Enter the second matrix element :
+5
+2
+3
+2
+Multiplication of the matrix :
+27      14
+11      6
